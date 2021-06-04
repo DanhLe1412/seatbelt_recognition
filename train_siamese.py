@@ -27,6 +27,9 @@ def main():
     parser.add_argument('--dirValid', default=None, help="Data to Valid in train step, Ex: '/datasets/validation'")
     args = parser.parse_args()
 
+    if os.path.isdir(args.weights_path) is not True:
+       os.mkdir(args.weights_path)
+
     model = create_model(trainable=TRAINABLE, base_model=base_model)
     prefix = "block3c_add"
     try:
@@ -82,5 +85,5 @@ def main():
 
 
 if __name__ == "__main__":
-   main()
+    main()
 
