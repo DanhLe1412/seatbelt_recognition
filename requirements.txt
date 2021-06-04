@@ -1,0 +1,8 @@
+tensorflow_addons
+tensorflow_datasets
+opencv-python
+pillow
+easydict
+pandas
+tqdm
+filterpy
